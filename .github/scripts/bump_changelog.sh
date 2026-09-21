@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# - prepend ./Changelog.md to ./docs/Changelog.history.md
-# - overwrite ./Changelog.md with ./template/Changelog.md
+# - prepend ./docs/Changelog.md to ./docs/Changelog.history.md
+# - overwrite ./docs/Changelog.md with ./.github/scripts/Changelog.md
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-CHANGELOG="Changelog.md"
+CHANGELOG="docs/Changelog.md"
 HISTORY="docs/Changelog.history.md"
-TEMPLATE="template/Changelog.md"
+TEMPLATE=".github/scripts/Changelog.md"
 
 timestamp() { date +"%Y%m%d%H%M%S"; }
 

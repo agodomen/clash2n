@@ -110,8 +110,8 @@ Runs frontend typecheck + lint + build, then Rust clippy + build.
 
 ## 致谢 / Acknowledgement
 
-clash2n 基于 clash-verge-rev 二次开发，后者基于或受以下项目启发：
-clash2n is forked from clash-verge-rev, which was based on or inspired by:
+clash2n 基于 [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) 二次开发，分叉基点：[`c6a4de1c`](https://github.com/clash-verge-rev/clash-verge-rev/commit/c6a4de1c6ace7234f2304ac77bff27d590d825f0)（2026-09-21）。
+clash2n is forked from [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev), fork base: [`c6a4de1c`](https://github.com/clash-verge-rev/clash-verge-rev/commit/c6a4de1c6ace7234f2304ac77bff27d590d825f0) (2026-09-21).
 
 - [zzzgydi/clash-verge](https://github.com/zzzgydi/clash-verge)：基于 Tauri 的 Clash GUI
 - [tauri-apps/tauri](https://github.com/tauri-apps/tauri)：更小、更快、更安全的桌面应用框架
@@ -120,8 +120,8 @@ clash2n is forked from clash-verge-rev, which was based on or inspired by:
 
 ## 隐私 / Privacy
 
-clash2n 不收集任何用户数据，配置与日志仅保存在本地。详见[隐私政策](./PRIVACY.md)。
-clash2n does not collect any user data; configuration and logs stay on your device. See the [Privacy Policy](./PRIVACY.md).
+clash2n 不收集任何用户数据，配置与日志仅保存在本地。详见[隐私政策](./docs/PRIVACY.md)。
+clash2n does not collect any user data; configuration and logs stay on your device. See the [Privacy Policy](./docs/PRIVACY.md).
 
 ## 许可证 / License
 

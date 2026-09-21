@@ -9,8 +9,6 @@ on:
     paths:
       - CONTRIBUTING.md
       - AGENTS.md
-      - CLAUDE.md
-      - GEMINI.md
       - .github/PULL_REQUEST_TEMPLATE.md
       - .github/workflows/pr-ai-slop-review.md
       - .github/workflows/docs-consistency.yml
@@ -19,8 +17,6 @@ on:
     paths:
       - CONTRIBUTING.md
       - AGENTS.md
-      - CLAUDE.md
-      - GEMINI.md
       - .github/PULL_REQUEST_TEMPLATE.md
       - .github/workflows/pr-ai-slop-review.md
   workflow_dispatch:
@@ -50,8 +46,6 @@ jobs:
           check CONTRIBUTING.md 'gh aw compile'
           check AGENTS.md 'Tests are justified'
           check CONTRIBUTING.md 'Do not pad'
-          check CLAUDE.md '@AGENTS.md'
-          check GEMINI.md 'AGENTS.md'
           check .github/workflows/pr-ai-slop-review.md 'Linkage Laundering'
           check .github/PULL_REQUEST_TEMPLATE.md '## Problem'
           check .github/PULL_REQUEST_TEMPLATE.md '## Approach'

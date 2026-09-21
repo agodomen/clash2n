@@ -40,7 +40,7 @@ function getGitShortCommit() {
 function getLatestTauriCommit() {
   try {
     const fullHash = execSync(
-      'bash ./scripts-workflow/get_latest_tauri_commit.bash',
+      'bash ./.github/scripts/get_latest_tauri_commit.bash',
     )
       .toString()
       .trim()

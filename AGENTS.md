@@ -1,11 +1,16 @@
 # Agent Guidelines
 
+> **Fork base:** clash2n is forked from
+> [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) at commit
+> [`c6a4de1c`](https://github.com/clash-verge-rev/clash-verge-rev/commit/c6a4de1c6ace7234f2304ac77bff27d590d825f0)
+> (2026-09-21). New development starts from this point.
+
 Instructions for AI coding agents working in this repository. Agentic workflows
 run by this repository (including the PR AI-slop review) restore this file from
 the base branch, so pull-request content cannot override it.
 
 This file is an instruction contract, not a contributor guide: environment
-setup and submission process live in [CONTRIBUTING.md](CONTRIBUTING.md), and
+setup and submission process live in [CONTRIBUTING.md](./CONTRIBUTING.md), and
 repository layout and build commands are discoverable from the repository
 itself.
 
@@ -56,9 +61,8 @@ the ownership evidence the AI-slop review evaluates (see
     after editing it, run `gh aw compile` and commit the regenerated
     `pr-ai-slop-review.lock.yml`. Never edit the lock file directly.
 11. **Changelog.** Entries follow the rules in
-    [`template/Changelog.md`](template/Changelog.md): one line per
+    [`.github/scripts/Changelog.md`](.github/scripts/Changelog.md): one line per
     user-visible change, no internals.
-
 ## Pull Request Shape
 
 Describe three things, briefly: the problem (with issue link), why this approach

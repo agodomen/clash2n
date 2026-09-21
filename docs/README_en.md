@@ -128,7 +128,7 @@ Clash Verge Rev builds on or draws inspiration from these projects:
 ## Privacy
 
 Clash Verge Rev does not collect any user data; configuration and logs stay on
-your own device. See the [Privacy Policy](../PRIVACY.md) for details.
+your own device. See the [Privacy Policy](./PRIVACY.md) for details.
 
 ## License
 

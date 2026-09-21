@@ -2,7 +2,7 @@ import fs from 'fs'
 import fsp from 'fs/promises'
 import path from 'path'
 
-const UPDATE_LOG = 'Changelog.md'
+const UPDATE_LOG = 'docs/Changelog.md'
 
 // parse the Changelog.md
 export async function resolveUpdateLog(tag) {
