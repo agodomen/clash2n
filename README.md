@@ -96,7 +96,11 @@ pnpm dev
 Run a full local check before pushing to avoid waiting for CI:
 
 ```shell
+# Linux / macOS
 ./check.sh
+
+# Windows (PowerShell)
+.\check.ps1
 ```
 
 该脚本依次执行前端 typecheck + lint + build 和 Rust clippy + build。
