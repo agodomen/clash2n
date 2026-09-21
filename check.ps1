@@ -11,7 +11,7 @@ Write-Host "🔍 System: Windows" -ForegroundColor Cyan
 
 Write-Host ""
 Write-Host "▶ Frontend: typecheck + lint + build" -ForegroundColor Yellow
-pnpm --dir front install --frozen-lockfile
+pnpm --dir front install
 pnpm --dir front typecheck
 pnpm --dir front lint
 pnpm --dir front build

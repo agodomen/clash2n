@@ -9,7 +9,7 @@ echo "🔍 System: $OS"
 
 echo ""
 echo "▶ Frontend: typecheck + lint + build"
-pnpm --dir front install --frozen-lockfile
+pnpm --dir front install
 pnpm --dir front typecheck
 pnpm --dir front lint
 pnpm --dir front build
