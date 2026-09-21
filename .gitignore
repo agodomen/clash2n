@@ -1,0 +1,24 @@
+library/
+
+# Dependencies
+node_modules/
+
+# Build outputs
+front/dist/
+client/target/
+dist/
+
+# IDE & editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+.eslintcache
+
+# Tauri generated
+client/gen/

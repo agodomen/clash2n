@@ -1,0 +1,57 @@
+{
+  "name": "clash2n",
+  "private": true,
+  "version": "2.5.5",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "packageManager": "pnpm@12.5.1",
+  "scripts": {
+    "prepare": "husky || true",
+    "dev": "node scripts/dev.mjs dev",
+    "dev:service": "node scripts/dev.mjs service",
+    "dev:sidecar": "node scripts/dev.mjs sidecar",
+    "dev:diff": "node scripts/dev.mjs dev",
+    "dev:trace": "node scripts/dev.mjs trace",
+    "dev:tauri": "cross-env RUST_BACKTRACE=full tauri dev --config client/tauri.conf.json -f tauri-dev",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' tauri build --config client/tauri.conf.json",
+    "build:fast": "cross-env NODE_OPTIONS='--max-old-space-size=4096' tauri build --config client/tauri.conf.json -- --profile fast-release",
+    "prebuild": "node scripts/prebuild.mjs",
+    "check": "bash check.sh",
+    "tauri": "tauri",
+    "web:dev": "pnpm --dir front dev",
+    "web:build": "pnpm --dir front build",
+    "web:serve": "pnpm --dir front serve",
+    "updater": "node scripts/updater.mjs",
+    "updater-fixed-webview2": "node scripts/updater-fixed-webview2.mjs",
+    "release-version": "node scripts/release-version.mjs",
+    "release:autobuild": "pnpm release-version autobuild",
+    "release:deploytest": "pnpm release-version deploytest",
+    "perf:build": "node scripts/perf/build.mjs",
+    "perf:run": "node scripts/perf/run.mjs",
+    "perf:compare": "node scripts/perf/compare.mjs",
+    "perf:test": "node --test scripts/perf/report.test.mjs"
+  },
+  "devDependencies": {
+    "@actions/github": "^9.1.1",
+    "@tauri-apps/cli": "2.11.4",
+    "adm-zip": "^0.6.0",
+    "axios": "^1.16.1",
+    "cli-color": "^2.0.4",
+    "commander": "^15.0.0",
+    "cross-env": "^10.1.0",
+    "glob": "^13.0.6",
+    "https-proxy-agent": "^9.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5",
+    "tar": "^7.5.15"
+  },
+  "lint-staged": {
+    "front/**/*.{ts,tsx,js,mjs}": [
+      "eslint --fix --max-warnings=0",
+      "biome format --write"
+    ],
+    "front/**/*.{css,json}": [
+      "biome format --write"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Frontend: format staged files
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx|js|mjs|json|css|scss)$' || true)
+if [ -n "$STAGED" ]; then
+  pnpm exec lint-staged
+fi
+
+# Rust: format staged files
+RUST_STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.rs$' || true)
+if [ -n "$RUST_STAGED" ]; then
+  cd client && cargo fmt -- ../../${RUST_STAGED} && cd ..
+  git add $RUST_STAGED
+fi
