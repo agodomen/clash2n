@@ -1,6 +1,9 @@
-# check.ps1 — local full validation (frontend + client build)
+﻿# check.ps1 — local full validation (frontend + client build)
 # Run before push to avoid waiting for CI feedback
 # Usage: .\check.ps1
+
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 $ErrorActionPreference = "Stop"
 
